@@ -27,7 +27,8 @@ def process_search_result(url: str):
 
 
 def clone_repo(url: str, path: str):
-    result = subprocess.run(["git", "clone", "--no-checkout", url, path])
+    # include all branches for a full backup
+    result = subprocess.run(["git", "clone", "--mirror", url, path])
     result.check_returncode()
 
 
