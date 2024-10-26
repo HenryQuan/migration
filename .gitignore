@@ -1,0 +1,5 @@
+.env
+key.py
+__pycache__/
+*.7z
+backups/
